@@ -4,7 +4,9 @@ import Image from 'next/image';
 import { IMAGES } from '@/constants/images';
 
 const TrustBar = () => {
-  const logos = IMAGES.clientLogos;
+  const logos = IMAGES.clientLogos.filter((logo) =>
+    ['Reliance', 'HCL', 'CRIF', 'ADP'].includes(logo.name)
+  );
 
   return (
     <section className="clients-section" id="clients">
